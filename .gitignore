@@ -31,6 +31,19 @@
 *.out
 *.app
 
+# Git
+.gitignore
+
+# C/Makefile
+*.clangd
+*.clang-format
+*.mk
+
+# Workspace
+*.project
+*.workspace
+
 # Directories
 .cache/
 .ctagsd/
+.codelite/
