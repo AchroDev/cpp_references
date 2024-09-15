@@ -13,18 +13,16 @@
    the same memory location as the original variable. 
 */
 
-// Function for example of how this doesn't use a reference and direct copies the variable fed to it, i.e 'a' or 5.
-// This causes the increment to not happen as it doesn't have "ownership" or access to the data.
-void Increment(int* value)
+// now using a reference in the parameters instead of a pointer.
+void Increment(int& value)
 {
-    // encapsulating '*value' in parenthesis causes the dereference to happen first.
-    (*value)++; // dereferencing to increment the value stored in the variable and not the memory address
+    value++; // no longer need to deref here.
 }
 
 int main() {
     
     int a  = 5; // just a variable
-    Increment(&a); // now using '&' to direct access the memory value
+    Increment(a); // the '&' can be removed here as the function now takes a reference in the parameters
     LOG(a);
     
     std::cin.get();
