@@ -12,12 +12,18 @@
  * Reference: A reference is an alias for an existing variable. It doesn't store an address but directly refers to
    the same memory location as the original variable. 
 */
+
+// Function for example of how this doesn't use a reference and direct copies the variable fed to it, i.e 'a' or 5.
+// This causes the increment to not happen as it doesn't have "ownership" or access to the data.
+void Increment(int value)
+{
+    value++;
+}
+
 int main() {
     
     int a  = 5; // just a variable
-    int& ref = a; // ref is being declared as a reference to the same memory location as the integer 'a'. Essentially an alias.
-    ref = 2;
-    
+    Increment(a);
     LOG(a);
     
     std::cin.get();
