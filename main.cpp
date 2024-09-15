@@ -16,7 +16,7 @@ int main() {
     
     int a  = 5; // just a variable
     int& ref = a; // ref is being declared as a reference to the same memory location as the integer 'a'. Essentially an alias.
-    ref = 2;
+    ref = 2; // directly changes 'a' to the value 2
     
     LOG(a);
     
